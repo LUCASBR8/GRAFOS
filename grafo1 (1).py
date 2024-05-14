@@ -496,7 +496,7 @@ def main():
 
         elif opcao == '4':
             if grafo is None:
-                print("Carregue o grafo primeiro (opção 1).")
+                print("Carregue o grafo primeiro (opção A).")
                 continue
 
             graus = calcular_graus(grafo)
