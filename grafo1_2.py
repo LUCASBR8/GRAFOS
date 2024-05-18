@@ -174,6 +174,15 @@ def encontrar_caminho_minimo(origem, destino, predecessores):
     caminho.insert(0, origem)
     return caminho
 
+def menor_caminho(grafo, origem, destino):
+    distancias, predecessores = dijkstra(grafo, origem)
+    caminho_curto = encontrar_caminho_minimo(origem, destino, predecessores)
+
+    if distancias[destino] == float('inf'):
+        return float('inf'), []
+    else:
+        return distancias[destino], caminho_curto
+
 def colorir_vertices(grafo):
     # Transformar o grafo em um grafo simétrico (não direcionado)
     grafo_simetrico = {}
